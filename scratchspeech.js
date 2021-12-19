@@ -4,8 +4,8 @@ class ScratchFetch {
     
     getInfo() {
         return {
-            "id": "Fetch",
-            "name": "Fetch",
+            "id": "scratchspeech",
+            "name": "Speech Recognization",
             "blocks": [
                         {
                             "opcode": "s",
