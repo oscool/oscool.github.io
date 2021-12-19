@@ -38,12 +38,12 @@ class ScratchFetch {
         };
 
         // This runs when the speech recognition service returns result
+        
+        // start recognition
+        recognition.start()
         recognition.onresult = (event) => {
             var transcript = event.results[0][0].transcript;
         };
-        
-        // start recognition
-        recognition.start().then()
     }
     t({}) {
         return transcript
