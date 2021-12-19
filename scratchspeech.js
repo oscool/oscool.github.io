@@ -9,7 +9,7 @@ class ScratchFetch {
             "blocks": [
                         {
                             "opcode": "s",
-                            "blockType": "operator",
+                            "blockType": "reporter",
                             "text": "Speech Recognization"
                         }
                 ]
