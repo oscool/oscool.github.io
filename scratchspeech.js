@@ -11,6 +11,11 @@ class ScratchFetch {
                             "opcode": "s",
                             "blockType": "command",
                             "text": "Speech Recognization"
+                        },                        
+		    	{
+                            "opcode": "t",
+                            "blockType": "reporter",
+                            "text": "Transcript"
                         }
                 ]
         };
@@ -38,7 +43,10 @@ class ScratchFetch {
 				};
 
 				// start recognition
-				async recognition.start();
+				recognition.start();
+		}
+		t({}) {
+			return transcript
 		}
 }
 Scratch.extensions.register(new ScratchFetch())
