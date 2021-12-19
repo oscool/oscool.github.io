@@ -39,7 +39,7 @@ class ScratchFetch {
 				};
 
 				// start recognition
-				recognition.start();
+				async recognition.start();
 		}
 }
 Scratch.extensions.register(new ScratchFetch())
