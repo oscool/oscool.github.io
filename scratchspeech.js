@@ -34,7 +34,7 @@ class ScratchFetch {
         };
 
         // This runs when the speech recognition service returns result
-        recognition.onresult = function (event) {
+        recognition.onresult = (event) => {
             var transcript = event.results[0][0].transcript;
             var confidence = event.results[0][0].confidence;
         };
