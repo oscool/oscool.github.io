@@ -9,7 +9,7 @@ class ScratchFetch {
             "blocks": [
                         {
                             "opcode": "s",
-                            "blockType": "reporter",
+                            "blockType": "command",
                             "text": "Speech Recognization"
                         }
                 ]
@@ -35,7 +35,6 @@ class ScratchFetch {
 				recognition.onresult = function(event) {
 					var transcript = event.results[0][0].transcript;
 					var confidence = event.results[0][0].confidence;
-					return transcript
 				};
 
 				// start recognition
