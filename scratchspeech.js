@@ -7,8 +7,13 @@ class ScratchFetch {
             blocks: [
                 {
                     opcode: "s",
-                    blockType: "reporter",
+                    blockType: "command",
                     text: "Speech Recognization",
+                },
+                {
+                    opcode: "t",
+                    blockType: "reporter",
+                    text: "transcript",
                 }
             ],
         };
@@ -38,7 +43,9 @@ class ScratchFetch {
         };
         
         // start recognition
-        recognition.start()
+        recognition.start().then()
+    }
+    t({}) {
         return transcript
     }
 }
