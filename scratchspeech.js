@@ -1,4 +1,4 @@
-class ScratchFetch {
+class ScratchSpeech {
     constructor() {}
     getInfo() {
         return {
@@ -49,5 +49,5 @@ class ScratchFetch {
         return transcript
     }
 }
-Scratch.extensions.register(new ScratchFetch());
+Scratch.extensions.register(new ScratchSpeech());
 
