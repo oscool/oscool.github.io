@@ -21,7 +21,7 @@ class ScratchAPI {
     }
 
     msg_count({user}) {
-        url = "https://api.scratch.mit.edu/users/" + user + "/messages/count/"
+        const url = "https://api.scratch.mit.edu/users/" + user + "/messages/count/"
         return fetch(url).then(response => response.text())
     }
 }
