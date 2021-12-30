@@ -26,7 +26,7 @@ class ScratchAPI {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
             "Accept-Language": "en"
         }
-        const corsproxy = "https://alloworigin.com/get?url="
+        const corsproxy = "https://api.allorigins.win/raw?url="
         const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/messages/count/"
         return fetch(url, headers).then(response => response.text())
     }
