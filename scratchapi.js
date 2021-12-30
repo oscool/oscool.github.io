@@ -28,7 +28,7 @@ class ScratchAPI {
         }
         const corsproxy = "https://api.allorigins.win/raw?url="
         const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/messages/count/"
-        return fetch(url, headers).then(response => response.json().count)
+        return fetch(url, headers).then(response => response.text())
     }
 }
 Scratch.extensions.register(new ScratchAPI());
