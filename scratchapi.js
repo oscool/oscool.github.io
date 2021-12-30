@@ -21,7 +21,7 @@ class ScratchAPI {
     }
 
     msg_count({user}) {
-        const corsproxy = "https://crossorigin.me/"
+        const corsproxy = "https://cors.bridged.cc/"
         const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/messages/count/"
         return fetch(url).then(response => response.text())
     }
