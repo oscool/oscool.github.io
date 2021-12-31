@@ -89,8 +89,12 @@ class ScratchAPI {
                 {
                     opcode: "proxy_featured",
                     blockType: "reporter",
-                    text: "Get Featured Projects",
-                    "arguments": {}
+                    text: "Get Featured Projects"
+                },
+                {
+                    opcode: "news",
+                    blockType: "reporter",
+                    text: "Get News"
                 }
             ],
         };
@@ -134,6 +138,11 @@ class ScratchAPI {
     proxy_featured({}) {
         const corsproxy = "https://cors-anywhere.herokuapp.com/"
         const url = corsproxy + "https://api.scratch.mit.edu/proxy/featured"
+        return fetch(url).then(response => response.text())
+    }
+    news({}) {
+        const corsproxy = "https://cors-anywhere.herokuapp.com/"
+        const url = corsproxy + "https://api.scratch.mit.edu/news"
         return fetch(url).then(response => response.text())
     }
 }
