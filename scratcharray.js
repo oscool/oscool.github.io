@@ -1,9 +1,9 @@
-class ScratchAPI {
+class ScratchArray {
     constructor() {}
     getInfo() {
         return {
-            id: "scratchAPI",
-            name: "Scratch API",
+            id: "scratchArray",
+            name: "Scratch Array",
             blocks: [
                 {
                     opcode: "array_id",
@@ -28,4 +28,4 @@ class ScratchAPI {
         return JSON.parse(array)[id]
     }
 }
-Scratch.extensions.register(new ScratchAPI());
+Scratch.extensions.register(new ScratchArray());
