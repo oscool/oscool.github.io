@@ -81,8 +81,8 @@ class ScratchAPI {
                                     "defaultValue": "OS_Cool_"
                                 },
                                 "id": {
-                                    "type": "string",
-                                    "defaultValue": "588007972"
+                                    "type": "number",
+                                    "defaultValue": 588007972
                                 }
                             }
                 },
@@ -131,6 +131,7 @@ class ScratchAPI {
         return fetch(url).then(response => response.text())
     }
     user_project({user,id}) {
+        id = id.toString()
         const corsproxy = "https://cors-anywhere.herokuapp.com/"
         const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/projects/" + id
         return fetch(url).then(response => response.text())
