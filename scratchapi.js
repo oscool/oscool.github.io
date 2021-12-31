@@ -1,6 +1,6 @@
 class ScratchAPI {
     constructor() {
-        this.corsproxy = "https://cors-anywhere.herokuapp.com/"
+        this.corsproxy = "https://crossorigin.me/"
     }
     getInfo() {
         return {
