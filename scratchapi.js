@@ -1,5 +1,7 @@
 class ScratchAPI {
-    constructor() {}
+    constructor() {
+        this.corsproxy = "https://cors-anywhere.herokuapp.com/"
+    }
     getInfo() {
         return {
             id: "scratchAPI",
@@ -101,49 +103,40 @@ class ScratchAPI {
     }
 
     user_msg_count({user}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/messages/count/"
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/messages/count/"
         return fetch(url).then(response => response.text())
     }
     user_profile({user}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/users/" + user
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user
         return fetch(url).then(response => response.text())
     }
     user_favs({user}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/favorites/"
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/favorites/"
         return fetch(url).then(response => response.text())
     }
     user_followers({user}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/followers/"
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/followers/"
         return fetch(url).then(response => response.text())
     }
     user_following({user}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/following/"
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/following/"
         return fetch(url).then(response => response.text())
     }
     user_projects({user}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/projects/"
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/projects/"
         return fetch(url).then(response => response.text())
     }
     user_project({user,id}) {
         id = id.toString()
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/projects/" + id
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/projects/" + id
         return fetch(url).then(response => response.text())
     }
     proxy_featured({}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/proxy/featured"
+        const url = this.corsproxy + "https://api.scratch.mit.edu/proxy/featured"
         return fetch(url).then(response => response.text())
     }
     news({}) {
-        const corsproxy = "https://cors-anywhere.herokuapp.com/"
-        const url = corsproxy + "https://api.scratch.mit.edu/news"
+        const url = this.corsproxy + "https://api.scratch.mit.edu/news"
         return fetch(url).then(response => response.text())
     }
 }
