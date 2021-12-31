@@ -25,7 +25,9 @@ class ScratchArray {
     }
 
    array_id({id,array}) {
-        return JSON.parse(array)[id]
+        const arr = JSON.parse(array)
+        console.log(arr)
+        return arr[id]
     }
 }
 Scratch.extensions.register(new ScratchArray());
