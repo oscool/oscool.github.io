@@ -85,6 +85,17 @@ class ScratchAPI {
                                     "defaultValue": "588007972"
                                 }
                             }
+                },
+                {
+                    opcode: "user_activity",
+                    blockType: "reporter",
+                    text: "Get [user]'s Activity",
+                    "arguments": {
+                                "user": {
+                                    "type": "string",
+                                    "defaultValue": "OS_Cool_"
+                                }
+                            }
                 }
             ],
         };
@@ -123,6 +134,11 @@ class ScratchAPI {
     user_project({user,id}) {
         const corsproxy = "https://cors-anywhere.herokuapp.com/"
         const url = corsproxy + "https://api.scratch.mit.edu/users/" + user + "/projects/" + id
+        return fetch(url).then(response => response.text())
+    }
+    user_activity({user}) {
+        const corsproxy = "https://cors-anywhere.herokuapp.com/"
+        const url = corsproxy + "https://api.scratch.mit.edu/proxy/users/" + user + "/activity/"
         return fetch(url).then(response => response.text())
     }
 }
