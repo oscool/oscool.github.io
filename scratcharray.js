@@ -12,7 +12,22 @@ class ScratchArray {
                     "arguments": {
                                 "id": {
                                     "type": "number",
-                                    "defaultValue": 1
+                                    "defaultValue": 0
+                                },
+                                "array": {
+                                    "type": "string",
+                                    "defaultValue": ""
+                                }
+                            }
+                },
+                {
+                    opcode: "array_id_json",
+                    blockType: "reporter",
+                    text: "jItem [id] of [array]",
+                    "arguments": {
+                                "id": {
+                                    "type": "number",
+                                    "defaultValue": 0
                                 },
                                 "array": {
                                     "type": "string",
