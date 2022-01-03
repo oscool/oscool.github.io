@@ -123,12 +123,12 @@ class ScratchAPI {
         return fetch(url).then(response => response.text())
     }
     user_followers({user,limit}) {
-        limit.toString()
+        limit = limit.toString()
         const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/followers?limit=" + limit
         return fetch(url).then(response => response.text())
     }
     user_following({user,limit}) {
-        limit.toString()
+        limit = limit.toString()
         const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/following?limit=" + limit
         return fetch(url).then(response => response.text())
     }
