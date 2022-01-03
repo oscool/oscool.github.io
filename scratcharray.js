@@ -34,6 +34,17 @@ class ScratchArray {
                                     "defaultValue": ""
                                 }
                             }
+                },
+                {
+                    opcode: "array_len",
+                    blockType: "reporter",
+                    text: "Length of [array]",
+                    "arguments": {
+                                "array": {
+                                    "type": "string",
+                                    "defaultValue": ""
+                                }
+                            }
                 }
             ],
         };
@@ -47,6 +58,10 @@ class ScratchArray {
         const arr = JSON.parse(array)
         const obj = arr[id]
         return JSON.stringify(obj)
+   }
+   array_len({array}) {
+        const arr = JSON.parse(array)
+        return arr.length
    }
 }
 Scratch.extensions.register(new ScratchArray());
