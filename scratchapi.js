@@ -43,23 +43,31 @@ class ScratchAPI {
                 {
                     opcode: "user_followers",
                     blockType: "reporter",
-                    text: "Get [user]'s Followers",
+                    text: "Get [user]'s Followers with limit [limit]",
                     "arguments": {
                                 "user": {
                                     "type": "string",
                                     "defaultValue": "OS_Cool_"
                                 },
+                                "limit":{
+                                    "type": "number",
+                                    "defaultValue": 20
+                                }
                             }
                 },
                 {
                     opcode: "user_following",
                     blockType: "reporter",
-                    text: "Get [user]'s Following",
+                    text: "Get [user]'s Following with limit [limit]",
                     "arguments": {
                                 "user": {
                                     "type": "string",
                                     "defaultValue": "OS_Cool_"
                                 },
+                                "limit":{
+                                    "type": "number",
+                                    "defaultValue": 20
+                                }
                             }
                 },
                 {
@@ -114,12 +122,14 @@ class ScratchAPI {
         const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/favorites/"
         return fetch(url).then(response => response.text())
     }
-    user_followers({user}) {
-        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/followers/"
+    user_followers({user,limit}) {
+        limit.toString()
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/followers?limit=" + limit
         return fetch(url).then(response => response.text())
     }
-    user_following({user}) {
-        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/following/"
+    user_following({user,limit}) {
+        limit.toString()
+        const url = this.corsproxy + "https://api.scratch.mit.edu/users/" + user + "/following?limit=" + limit
         return fetch(url).then(response => response.text())
     }
     user_projects({user}) {
