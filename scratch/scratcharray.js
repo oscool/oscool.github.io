@@ -79,8 +79,8 @@ class ScratchArray {
         return arr.length
    }
    json_val({val,json}) {
-        const json = JSON.parse(json)
-        return json[val]
+        const j = JSON.parse(json)
+        return j[val]
    }
 }
 Scratch.extensions.register(new ScratchArray());
