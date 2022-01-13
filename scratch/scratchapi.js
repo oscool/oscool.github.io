@@ -6,6 +6,8 @@ class ScratchAPI {
         return {
             id: "scratchAPI",
             name: "Scratch API",
+            color1: '#ffc300',
+            color2: '#ffc300',
             blocks: [
                 {
                     opcode: "user_msg_count",
